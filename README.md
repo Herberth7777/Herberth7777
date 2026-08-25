@@ -61,8 +61,7 @@ Sou engenheiro de software e arquiteto de soluções na interseção entre **Int
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Herberth7777&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=050816&title_color=7CF7E8&text_color=C8D5F5&icon_color=C65CFF&ring_color=6D5EF7&locale=pt-br" alt="Estatísticas de Herberth no GitHub" />
-<img width="49%" src="https://streak-stats.demolab.com?user=Herberth7777&hide_border=true&background=050816&ring=6D5EF7&fire=C65CFF&currStreakLabel=7CF7E8&sideLabels=C8D5F5&dates=7B8BAD&currStreakNum=FFFFFF&sideNums=FFFFFF&locale=pt_BR" alt="Sequência de contribuições de Herberth no GitHub" />
+<img width="100%" src="https://raw.githubusercontent.com/Herberth7777/Herberth7777/output/profile-metrics.svg" alt="Métricas ao vivo de Herberth no GitHub" />
 
 </div>
 

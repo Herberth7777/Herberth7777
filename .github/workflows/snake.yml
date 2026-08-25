@@ -24,6 +24,12 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%236D5EF7&color_dots=%23EBEDF0,%23D8D4FF,%23AAA2FF,%237CF7E8,%23C65CFF
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%237CF7E8&color_dots=%230B1020,%23263459,%236D5EF7,%23C65CFF,%237CF7E8
 
+      - name: Generate live profile metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python3 scripts/generate_metrics.py
+
       - name: Publish animation to output branch
         uses: crazy-max/ghaction-github-pages@v5.0.0
         with:
