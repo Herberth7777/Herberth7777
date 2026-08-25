@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
   <title id="title">Herberth Cunha — System Interface</title>
-  <desc id="desc">Interface futurista em neon apresentando Herberth Cunha, engenheiro de software e arquiteto de inteligência artificial, dados e cloud.</desc>
+  <desc id="desc">Interface futurista em neon apresentando Herberth Cunha e alternando símbolos de código, Python, Flutter, SQL e arquitetura cloud.</desc>
 
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -40,9 +40,6 @@
     <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="18" />
     </filter>
-    <clipPath id="codeClip">
-      <text x="406" y="444" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="245" font-weight="800">&lt;/&gt;</text>
-    </clipPath>
   </defs>
 
   <rect width="1280" height="720" rx="24" fill="url(#bg)" />
@@ -95,11 +92,57 @@
     <ellipse cx="408" cy="387" rx="230" ry="130" fill="#6D5EF7" opacity="0.08" filter="url(#softGlow)">
       <animate attributeName="rx" values="205;245;205" dur="4s" repeatCount="indefinite" />
     </ellipse>
-    <g clip-path="url(#codeClip)">
-      <rect x="150" y="245" width="520" height="235" fill="url(#dots)" filter="url(#outerGlow)" />
-      <rect x="150" y="245" width="520" height="235" fill="url(#neon)" opacity="0.2">
-        <animate attributeName="x" values="-520;680" dur="3.5s" repeatCount="indefinite" />
-      </rect>
+
+    <!-- five-part animated technology carousel -->
+    <g opacity="1">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.16;0.20;0.96;1" dur="20s" repeatCount="indefinite" />
+      <text x="408" y="444" text-anchor="middle" fill="url(#dots)" stroke="url(#neon)" stroke-width="1.5" stroke-opacity="0.32" filter="url(#outerGlow)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="245" font-weight="800">&lt;/&gt;</text>
+      <text x="408" y="500" text-anchor="middle" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">01 / CODE SYSTEMS</text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.16;0.20;0.36;0.40;1" dur="20s" repeatCount="indefinite" />
+      <text x="408" y="438" text-anchor="middle" fill="url(#dots)" stroke="url(#neon)" stroke-width="1.5" stroke-opacity="0.34" filter="url(#outerGlow)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="220" font-weight="800">.py</text>
+      <path d="M322 460H494" stroke="url(#neon)" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+      <text x="408" y="500" text-anchor="middle" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">02 / PYTHON INTELLIGENCE</text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.36;0.40;0.56;0.60;1" dur="20s" repeatCount="indefinite" />
+      <g fill="url(#dots)" stroke="url(#neon)" stroke-width="2" stroke-linejoin="round" filter="url(#outerGlow)">
+        <path d="M294 374L438 230H520L376 374H294Z" />
+        <path d="M376 374L438 312H520L458 374H376Z" />
+        <path d="M376 374L438 436H520L458 374H376Z" />
+      </g>
+      <path d="M438 312L520 394" stroke="#7CF7E8" stroke-width="5" opacity="0.28" />
+      <text x="408" y="500" text-anchor="middle" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">03 / FLUTTER EXPERIENCE</text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.56;0.60;0.76;0.80;1" dur="20s" repeatCount="indefinite" />
+      <g fill="url(#dots)" stroke="url(#neon)" stroke-width="3" filter="url(#outerGlow)">
+        <ellipse cx="408" cy="292" rx="116" ry="40" />
+        <path d="M292 292V414C292 436 344 454 408 454C472 454 524 436 524 414V292C524 314 472 332 408 332C344 332 292 314 292 292Z" fill-opacity="0.34" />
+      </g>
+      <path d="M292 352C292 374 344 392 408 392C472 392 524 374 524 352M292 406C292 428 344 446 408 446C472 446 524 428 524 406" fill="none" stroke="#7CF7E8" stroke-width="2" opacity="0.55" />
+      <text x="408" y="384" text-anchor="middle" fill="#F5F7FF" font-family="ui-monospace, monospace" font-size="52" font-weight="800" letter-spacing="8">SQL</text>
+      <text x="408" y="500" text-anchor="middle" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">04 / DATA ARCHITECTURE</text>
+    </g>
+
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.76;0.80;0.96;1" dur="20s" repeatCount="indefinite" />
+      <g stroke="url(#neon)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#outerGlow)">
+        <path d="M318 390C286 390 266 370 266 342C266 315 286 294 314 291C326 247 366 220 412 220C468 220 511 258 516 310C544 313 564 332 564 359C564 386 544 406 516 406H318Z" fill="url(#dots)" />
+        <path d="M408 407V444M332 407V432M484 407V432M332 432H302M484 432H514" fill="none" />
+        <rect x="280" y="421" width="44" height="30" rx="6" fill="#0B1020" />
+        <rect x="386" y="434" width="44" height="30" rx="6" fill="#0B1020" />
+        <rect x="492" y="421" width="44" height="30" rx="6" fill="#0B1020" />
+      </g>
+      <circle cx="302" cy="436" r="4" fill="#7CF7E8" />
+      <circle cx="408" cy="449" r="4" fill="#C65CFF" />
+      <circle cx="514" cy="436" r="4" fill="#7CF7E8" />
+      <text x="408" y="342" text-anchor="middle" fill="#F5F7FF" font-family="ui-monospace, monospace" font-size="28" font-weight="800" letter-spacing="5">CLOUD</text>
+      <text x="408" y="500" text-anchor="middle" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11" letter-spacing="4">05 / CLOUD ARCHITECTURE</text>
     </g>
 
     <g fill="none" stroke="#7CF7E8" stroke-width="1" opacity="0.5">
