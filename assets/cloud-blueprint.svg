@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitetura cloud gerenciada com Terraform</title>
+  <desc id="desc">Blueprint genérico de arquitetura AWS com edge, balanceamento, computação stateless, mensageria, dados, observabilidade, segurança e FinOps.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816" /><stop offset="1" stop-color="#0B0820" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7CF7E8" /><stop offset="0.5" stop-color="#6D5EF7" /><stop offset="1" stop-color="#C65CFF" />
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#6D5EF7" stroke-width="0.5" opacity="0.10" />
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0L8 4L0 8Z" fill="#7CF7E8" />
+    </marker>
+  </defs>
+
+  <rect width="1280" height="560" rx="22" fill="url(#bg)" />
+  <rect x="1" y="1" width="1278" height="558" rx="21" fill="url(#grid)" stroke="#263459" stroke-width="2" />
+  <path d="M26 58H1254" stroke="#263459" />
+  <path d="M26 57H380" stroke="url(#neon)" stroke-width="2" />
+  <text x="28" y="37" fill="#7CF7E8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="3">CLOUD.REFERENCE.BLUEPRINT</text>
+  <text x="1252" y="37" text-anchor="end" fill="#C65CFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3">AWS / TERRAFORM MANAGED</text>
+
+  <g fill="none" stroke="#7CF7E8" stroke-width="2" marker-end="url(#arrow)" opacity="0.6">
+    <path d="M242 152H286" /><path d="M482 152H526" /><path d="M812 126H856" /><path d="M1042 126H1076" />
+    <path d="M670 238V278H950V238" />
+    <path d="M950 238V278H1158V238" />
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <g transform="translate(36,88)">
+      <rect width="206" height="132" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="30" fill="#7CF7E8" font-size="11" letter-spacing="2">01 / EDGE</text>
+      <text x="18" y="64" fill="#FFFFFF" font-size="18" font-weight="700">DNS · CDN</text>
+      <text x="18" y="90" fill="#9BA9CA" font-size="11">TLS · cache · policies</text>
+      <text x="18" y="112" fill="#9BA9CA" font-size="11">CloudFront · Cloudflare</text>
+    </g>
+    <g transform="translate(286,100)">
+      <rect width="196" height="104" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="30" fill="#8D82FF" font-size="11" letter-spacing="2">02 / INGRESS</text>
+      <text x="18" y="63" fill="#FFFFFF" font-size="18" font-weight="700">LOAD BALANCER</text>
+      <text x="18" y="86" fill="#9BA9CA" font-size="11">health · routing · TLS</text>
+    </g>
+    <g transform="translate(526,76)">
+      <rect width="286" height="164" rx="16" fill="#090E20" stroke="#34406C" />
+      <text x="18" y="30" fill="#C65CFF" font-size="11" letter-spacing="2">03 / COMPUTE</text>
+      <text x="18" y="64" fill="#FFFFFF" font-size="19" font-weight="700">STATELESS SERVICES</text>
+      <rect x="18" y="82" width="116" height="32" rx="8" fill="#111831" stroke="#263459" />
+      <text x="76" y="103" text-anchor="middle" fill="#D7DFF5" font-size="11">EC2 / ARM64</text>
+      <rect x="150" y="82" width="116" height="32" rx="8" fill="#111831" stroke="#263459" />
+      <text x="208" y="103" text-anchor="middle" fill="#D7DFF5" font-size="11">LAMBDA</text>
+      <text x="18" y="139" fill="#9BA9CA" font-size="11">Auto Scaling · workers · APIs</text>
+    </g>
+    <g transform="translate(856,76)">
+      <rect width="186" height="164" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="30" fill="#8D82FF" font-size="11" letter-spacing="2">04 / ASYNC</text>
+      <text x="18" y="64" fill="#FFFFFF" font-size="18" font-weight="700">SQS</text>
+      <text x="18" y="91" fill="#9BA9CA" font-size="11">idempotency</text>
+      <text x="18" y="114" fill="#9BA9CA" font-size="11">retry · backoff</text>
+      <text x="18" y="137" fill="#C65CFF" font-size="11">DLQ + alarms</text>
+    </g>
+    <g transform="translate(1076,76)">
+      <rect width="168" height="164" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="30" fill="#7CF7E8" font-size="11" letter-spacing="2">05 / DATA</text>
+      <text x="18" y="64" fill="#FFFFFF" font-size="16" font-weight="700">POSTGRESQL</text>
+      <text x="18" y="91" fill="#9BA9CA" font-size="11">RDS · backups</text>
+      <text x="18" y="114" fill="#9BA9CA" font-size="11">S3 · lifecycle</text>
+      <text x="18" y="137" fill="#9BA9CA" font-size="11">DynamoDB</text>
+    </g>
+  </g>
+
+  <rect x="36" y="306" width="1208" height="176" rx="18" fill="#070B19" stroke="#34406C" />
+  <text x="60" y="341" fill="#7CF7E8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="3">TERRAFORM CONTROL PLANE</text>
+  <text x="1218" y="341" text-anchor="end" fill="#7B8BAD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">VERSIONED · REVIEWABLE · REPEATABLE</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+    <g transform="translate(58,364)"><rect width="204" height="72" rx="12" fill="#0B1020" stroke="#263459" /><text x="16" y="29" fill="#C65CFF">NETWORK</text><text x="16" y="52" fill="#9BA9CA">VPC · subnets · routes</text></g>
+    <g transform="translate(298,364)"><rect width="204" height="72" rx="12" fill="#0B1020" stroke="#263459" /><text x="16" y="29" fill="#C65CFF">SECURITY</text><text x="16" y="52" fill="#9BA9CA">IAM · SG · encryption</text></g>
+    <g transform="translate(538,364)"><rect width="204" height="72" rx="12" fill="#0B1020" stroke="#263459" /><text x="16" y="29" fill="#C65CFF">COMPUTE</text><text x="16" y="52" fill="#9BA9CA">images · scaling · health</text></g>
+    <g transform="translate(778,364)"><rect width="204" height="72" rx="12" fill="#0B1020" stroke="#263459" /><text x="16" y="29" fill="#C65CFF">DATA</text><text x="16" y="52" fill="#9BA9CA">schema · retention · backup</text></g>
+    <g transform="translate(1018,364)"><rect width="204" height="72" rx="12" fill="#0B1020" stroke="#263459" /><text x="16" y="29" fill="#C65CFF">OBSERVABILITY</text><text x="16" y="52" fill="#9BA9CA">logs · metrics · budgets</text></g>
+  </g>
+
+  <path d="M58 454H1222" stroke="url(#neon)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#9BA9CA">
+    <text x="38" y="520">SECURE BY DESIGN</text><text x="318" y="520">OIDC / LEAST PRIVILEGE</text><text x="638" y="520">ROLLBACK AWARE</text><text x="878" y="520">FINOPS GUARDRAILS</text><text x="1242" y="520" text-anchor="end" fill="#7CF7E8">OPERATION READY ●</text>
+  </g>
+</svg>

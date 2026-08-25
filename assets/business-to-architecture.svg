@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="390" viewBox="0 0 1280 390" role="img" aria-labelledby="title desc">
+  <title id="title">Do problema de negócio à operação</title>
+  <desc id="desc">Modelo de trabalho em cinco etapas: contexto, domínio, arquitetura, entrega e operação.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816" /><stop offset="1" stop-color="#0B0820" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#7CF7E8" /><stop offset="0.5" stop-color="#6D5EF7" /><stop offset="1" stop-color="#C65CFF" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#6D5EF7" stroke-width="0.5" opacity="0.10" />
+    </pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="390" rx="22" fill="url(#bg)" />
+  <rect x="1" y="1" width="1278" height="388" rx="21" fill="url(#grid)" stroke="#263459" stroke-width="2" />
+  <path d="M26 52H1254" stroke="#263459" />
+  <path d="M26 51H330" stroke="url(#neon)" stroke-width="2" />
+  <text x="28" y="34" fill="#7CF7E8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3">ENGINEERING.OPERATING.MODEL</text>
+  <text x="1252" y="34" text-anchor="end" fill="#C65CFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="3">BUSINESS FIRST</text>
+
+  <g fill="none" stroke="url(#neon)" stroke-width="2" opacity="0.65">
+    <path d="M260 177H280" /><path d="M510 177H530" /><path d="M760 177H780" /><path d="M1010 177H1030" />
+  </g>
+  <g fill="#7CF7E8" filter="url(#glow)">
+    <path d="M279 177l-8-5v10z" /><path d="M529 177l-8-5v10z" /><path d="M779 177l-8-5v10z" /><path d="M1029 177l-8-5v10z" />
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <g transform="translate(30,78)">
+      <rect width="230" height="198" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="34" fill="#7CF7E8" font-size="12" letter-spacing="2">01 / CONTEXTO</text>
+      <text x="18" y="72" fill="#FFFFFF" font-size="18" font-weight="700">ENTENDER</text>
+      <text x="18" y="102" fill="#9BA9CA" font-size="12">Objetivo do negócio</text>
+      <text x="18" y="126" fill="#9BA9CA" font-size="12">Pessoas e operação</text>
+      <text x="18" y="150" fill="#9BA9CA" font-size="12">Restrições e riscos</text>
+      <path d="M18 174H212" stroke="#18213D" /><circle cx="201" cy="174" r="4" fill="#7CF7E8" />
+    </g>
+    <g transform="translate(280,78)">
+      <rect width="230" height="198" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="34" fill="#8D82FF" font-size="12" letter-spacing="2">02 / DOMÍNIO</text>
+      <text x="18" y="72" fill="#FFFFFF" font-size="18" font-weight="700">MODELAR</text>
+      <text x="18" y="102" fill="#9BA9CA" font-size="12">Fluxos e eventos</text>
+      <text x="18" y="126" fill="#9BA9CA" font-size="12">Regras e indicadores</text>
+      <text x="18" y="150" fill="#9BA9CA" font-size="12">Fonte da verdade</text>
+      <path d="M18 174H212" stroke="#18213D" /><circle cx="201" cy="174" r="4" fill="#8D82FF" />
+    </g>
+    <g transform="translate(530,78)">
+      <rect width="230" height="198" rx="16" fill="#090E20" stroke="#34406C" />
+      <text x="18" y="34" fill="#C65CFF" font-size="12" letter-spacing="2">03 / ARQUITETURA</text>
+      <text x="18" y="72" fill="#FFFFFF" font-size="18" font-weight="700">DECIDIR</text>
+      <text x="18" y="102" fill="#9BA9CA" font-size="12">Limites e integrações</text>
+      <text x="18" y="126" fill="#9BA9CA" font-size="12">Dados e resiliência</text>
+      <text x="18" y="150" fill="#9BA9CA" font-size="12">Custo e segurança</text>
+      <path d="M18 174H212" stroke="#18213D" /><circle cx="201" cy="174" r="4" fill="#C65CFF" />
+    </g>
+    <g transform="translate(780,78)">
+      <rect width="230" height="198" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="34" fill="#8D82FF" font-size="12" letter-spacing="2">04 / ENTREGA</text>
+      <text x="18" y="72" fill="#FFFFFF" font-size="18" font-weight="700">CONSTRUIR</text>
+      <text x="18" y="102" fill="#9BA9CA" font-size="12">Software e IaC</text>
+      <text x="18" y="126" fill="#9BA9CA" font-size="12">Testes e pipelines</text>
+      <text x="18" y="150" fill="#9BA9CA" font-size="12">Deploy reversível</text>
+      <path d="M18 174H212" stroke="#18213D" /><circle cx="201" cy="174" r="4" fill="#8D82FF" />
+    </g>
+    <g transform="translate(1030,78)">
+      <rect width="220" height="198" rx="16" fill="#090E20" stroke="#263459" />
+      <text x="18" y="34" fill="#7CF7E8" font-size="12" letter-spacing="2">05 / OPERAÇÃO</text>
+      <text x="18" y="72" fill="#FFFFFF" font-size="18" font-weight="700">APRENDER</text>
+      <text x="18" y="102" fill="#9BA9CA" font-size="12">Sinais e SLOs</text>
+      <text x="18" y="126" fill="#9BA9CA" font-size="12">FinOps e segurança</text>
+      <text x="18" y="150" fill="#9BA9CA" font-size="12">Evolução do produto</text>
+      <path d="M18 174H202" stroke="#18213D" /><circle cx="191" cy="174" r="4" fill="#7CF7E8" />
+    </g>
+  </g>
+
+  <text x="640" y="326" text-anchor="middle" fill="#F5F7FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="1">A TECNOLOGIA É ESCOLHIDA DEPOIS QUE O PROBLEMA ESTÁ CLARO.</text>
+  <text x="640" y="354" text-anchor="middle" fill="#7B8BAD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2">VALUE → DOMAIN → SYSTEM → DELIVERY → FEEDBACK</text>
+</svg>

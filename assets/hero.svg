@@ -179,9 +179,9 @@
 
       <path d="M24 176H404" stroke="#253157" />
       <text x="24" y="202" fill="#C65CFF">CORE.LANG</text><text x="130" y="202" fill="#D7DFF5">Python · Java · TS</text>
-      <text x="24" y="228" fill="#C65CFF">CORE.AI</text><text x="130" y="228" fill="#D7DFF5">ML · DL · GenAI</text>
-      <text x="24" y="254" fill="#C65CFF">CORE.DATA</text><text x="130" y="254" fill="#D7DFF5">Big Data · Analytics</text>
-      <text x="24" y="280" fill="#C65CFF">CORE.CLOUD</text><text x="130" y="280" fill="#D7DFF5">AWS · GCP · K8s</text>
+      <text x="24" y="228" fill="#C65CFF">CORE.AI</text><text x="130" y="228" fill="#D7DFF5">ML · DL · Agents</text>
+      <text x="24" y="254" fill="#C65CFF">CORE.DATA</text><text x="130" y="254" fill="#D7DFF5">SQL · Analytics</text>
+      <text x="24" y="280" fill="#C65CFF">CORE.CLOUD</text><text x="130" y="280" fill="#D7DFF5">AWS · TF · Docker</text>
       <text x="24" y="306" fill="#C65CFF">CORE.SCALE</text><text x="130" y="306" fill="#D7DFF5">FinOps · CyberSec</text>
 
       <path d="M24 328H404" stroke="#253157" />
