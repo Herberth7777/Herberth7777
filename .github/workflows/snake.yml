@@ -1,0 +1,34 @@
+name: Generate contribution animation
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Generate neon contribution snakes
+        uses: Platane/snk/svg-only@v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%236D5EF7&color_dots=%23EBEDF0,%23D8D4FF,%23AAA2FF,%237CF7E8,%23C65CFF
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%237CF7E8&color_dots=%230B1020,%23263459,%236D5EF7,%23C65CFF,%237CF7E8
+
+      - name: Publish animation to output branch
+        uses: crazy-max/ghaction-github-pages@v5.0.0
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: refresh contribution animation"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

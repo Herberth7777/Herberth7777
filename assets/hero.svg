@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Herberth Cunha — System Interface</title>
+  <desc id="desc">Interface futurista em neon apresentando Herberth Cunha, engenheiro de software e arquiteto de inteligência artificial, dados e cloud.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030611" />
+      <stop offset="0.48" stop-color="#070B1D" />
+      <stop offset="1" stop-color="#0B0820" />
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7CF7E8" />
+      <stop offset="0.5" stop-color="#6D5EF7" />
+      <stop offset="1" stop-color="#C65CFF" />
+    </linearGradient>
+    <linearGradient id="softNeon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7CF7E8" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#C65CFF" stop-opacity="0.02" />
+    </linearGradient>
+    <radialGradient id="glowA">
+      <stop offset="0" stop-color="#6D5EF7" stop-opacity="0.24" />
+      <stop offset="1" stop-color="#6D5EF7" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowB">
+      <stop offset="0" stop-color="#7CF7E8" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#7CF7E8" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#6D5EF7" stroke-width="0.6" opacity="0.12" />
+    </pattern>
+    <pattern id="dots" width="13" height="13" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.5" fill="url(#neon)">
+        <animate attributeName="r" values="1.7;2.8;1.7" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+    </pattern>
+    <filter id="outerGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" />
+    </filter>
+    <clipPath id="codeClip">
+      <text x="406" y="444" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="245" font-weight="800">&lt;/&gt;</text>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="720" rx="24" fill="url(#bg)" />
+  <ellipse cx="286" cy="178" rx="370" ry="300" fill="url(#glowA)" />
+  <ellipse cx="1120" cy="620" rx="340" ry="250" fill="url(#glowB)" />
+  <rect x="1" y="1" width="1278" height="718" rx="23" fill="url(#grid)" stroke="#253157" stroke-width="2" />
+
+  <!-- top system rail -->
+  <circle cx="32" cy="30" r="6" fill="#FF6B86" />
+  <circle cx="54" cy="30" r="6" fill="#FFD166" />
+  <circle cx="76" cy="30" r="6" fill="#7CF7E8" />
+  <text x="102" y="35" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="14" letter-spacing="2">HERBERTH7777 / README.md</text>
+  <text x="1030" y="35" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="13" letter-spacing="2">SYSTEM ONLINE</text>
+  <circle cx="1242" cy="30" r="5" fill="#7CF7E8" filter="url(#outerGlow)">
+    <animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <path d="M20 58H1260" stroke="#263259" />
+  <rect x="20" y="57" width="240" height="2" fill="url(#neon)">
+    <animate attributeName="x" values="20;1020;20" dur="8s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- title band -->
+  <text x="45" y="94" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="12" letter-spacing="3">VISUAL.MAP</text>
+  <text x="45" y="130" fill="#F5F7FF" font-family="ui-monospace, monospace" font-size="28" font-weight="700" letter-spacing="1">HERBERTH CUNHA</text>
+  <text x="45" y="155" fill="#9BA9CA" font-family="ui-monospace, monospace" font-size="14" letter-spacing="1.2">SOFTWARE ENGINEER · AI / DATA / CLOUD ARCHITECT</text>
+
+  <g transform="translate(812,82)">
+    <rect width="135" height="70" rx="10" fill="#0B1020" stroke="#253157" />
+    <text x="14" y="24" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">CONTRIBUTIONS</text>
+    <text x="14" y="54" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="25" font-weight="700">LIVE</text>
+  </g>
+  <g transform="translate(958,82)">
+    <rect width="135" height="70" rx="10" fill="#0B1020" stroke="#253157" />
+    <text x="14" y="24" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">BASE</text>
+    <text x="14" y="54" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="18" font-weight="700">BRASIL</text>
+  </g>
+  <g transform="translate(1104,82)">
+    <rect width="136" height="70" rx="10" fill="#0B1020" stroke="#253157" />
+    <text x="14" y="24" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1">CURRENT MODE</text>
+    <text x="14" y="54" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="18" font-weight="700">BUILD</text>
+  </g>
+
+  <!-- left visual console -->
+  <g>
+    <rect x="40" y="180" width="744" height="425" rx="18" fill="#050916" fill-opacity="0.74" stroke="#34406C" stroke-width="1.5" />
+    <rect x="54" y="194" width="716" height="397" rx="12" fill="url(#softNeon)" stroke="#6D5EF7" stroke-opacity="0.48" />
+    <path d="M74 216H146M74 216V264M750 216H678M750 216V264M74 568H146M74 568V520M750 568H678M750 568V520" fill="none" stroke="url(#neon)" stroke-width="2" filter="url(#outerGlow)" />
+    <text x="78" y="246" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2">INTELLIGENCE CORE</text>
+
+    <ellipse cx="408" cy="387" rx="230" ry="130" fill="#6D5EF7" opacity="0.08" filter="url(#softGlow)">
+      <animate attributeName="rx" values="205;245;205" dur="4s" repeatCount="indefinite" />
+    </ellipse>
+    <g clip-path="url(#codeClip)">
+      <rect x="150" y="245" width="520" height="235" fill="url(#dots)" filter="url(#outerGlow)" />
+      <rect x="150" y="245" width="520" height="235" fill="url(#neon)" opacity="0.2">
+        <animate attributeName="x" values="-520;680" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <g fill="none" stroke="#7CF7E8" stroke-width="1" opacity="0.5">
+      <circle cx="408" cy="376" r="142" stroke-dasharray="3 13">
+        <animateTransform attributeName="transform" type="rotate" from="0 408 376" to="360 408 376" dur="24s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="408" cy="376" r="164" stroke="#C65CFF" stroke-dasharray="2 23">
+        <animateTransform attributeName="transform" type="rotate" from="360 408 376" to="0 408 376" dur="18s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <text x="78" y="548" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="11">● MODEL READY</text>
+    <text x="645" y="548" fill="#C65CFF" font-family="ui-monospace, monospace" font-size="11">SECURE</text>
+
+    <rect x="55" y="194" width="714" height="2" fill="#7CF7E8" opacity="0.55">
+      <animate attributeName="y" values="202;584;202" dur="5.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0;.7;0" dur="5.5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- right system interface -->
+  <g transform="translate(812,180)">
+    <rect width="428" height="425" rx="18" fill="#050916" fill-opacity="0.82" stroke="#34406C" stroke-width="1.5" />
+    <text x="24" y="35" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="12" letter-spacing="3">SYSTEM.INTERFACE</text>
+    <path d="M24 50H404" stroke="#253157" />
+
+    <g font-family="ui-monospace, monospace" font-size="13">
+      <g fill="#7B8BAD">
+        <text x="24" y="78">Subject</text><text x="24" y="104">Role</text><text x="24" y="130">Origin</text><text x="24" y="156">Status</text>
+      </g>
+      <g fill="#F5F7FF">
+        <text x="130" y="78">@Herberth7777</text><text x="130" y="104">Software Engineer</text><text x="130" y="130">Uberlândia, BR</text><text x="130" y="156" fill="#7CF7E8">● OPERATIONAL</text>
+      </g>
+
+      <path d="M24 176H404" stroke="#253157" />
+      <text x="24" y="202" fill="#C65CFF">CORE.LANG</text><text x="130" y="202" fill="#D7DFF5">Python · Java · TS</text>
+      <text x="24" y="228" fill="#C65CFF">CORE.AI</text><text x="130" y="228" fill="#D7DFF5">ML · DL · GenAI</text>
+      <text x="24" y="254" fill="#C65CFF">CORE.DATA</text><text x="130" y="254" fill="#D7DFF5">Big Data · Analytics</text>
+      <text x="24" y="280" fill="#C65CFF">CORE.CLOUD</text><text x="130" y="280" fill="#D7DFF5">AWS · GCP · K8s</text>
+      <text x="24" y="306" fill="#C65CFF">CORE.SCALE</text><text x="130" y="306" fill="#D7DFF5">FinOps · CyberSec</text>
+
+      <path d="M24 328H404" stroke="#253157" />
+      <text x="24" y="355" fill="#7B8BAD">UPTIME</text><text x="130" y="355" fill="#7CF7E8">FOCUS × CURIOSITY</text>
+      <text x="24" y="381" fill="#7B8BAD">SIGNAL</text><text x="130" y="381" fill="#F5F7FF">HORIZONS INSIGHTS</text>
+    </g>
+
+    <rect x="24" y="398" width="380" height="4" rx="2" fill="#151C36" />
+    <rect x="24" y="398" width="306" height="4" rx="2" fill="url(#neon)">
+      <animate attributeName="width" values="120;360;306" dur="5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- footer telemetry -->
+  <path d="M40 630H1240" stroke="#253157" />
+  <text x="42" y="659" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2">MISSION</text>
+  <text x="42" y="685" fill="#F5F7FF" font-family="ui-monospace, monospace" font-size="15">BUILD WITH INTELLIGENCE · SCALE WITH CONTROL · SHIP WITH PURPOSE</text>
+  <text x="1044" y="660" fill="#7B8BAD" font-family="ui-monospace, monospace" font-size="11" letter-spacing="2">TRANSMISSION</text>
+  <text x="1044" y="686" fill="#7CF7E8" font-family="ui-monospace, monospace" font-size="15">WORLDWIDE_</text>
+</svg>
