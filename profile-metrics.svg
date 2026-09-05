@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="290" viewBox="0 0 1280 290" role="img" aria-labelledby="title desc">
+  <title id="title">Métricas ao vivo de Herberth7777</title>
+  <desc id="desc">Contribuições, sequências e repositórios públicos atualizados automaticamente.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816" /><stop offset="1" stop-color="#0B0820" />
+    </linearGradient>
+    <linearGradient id="line"><stop stop-color="#7CF7E8" /><stop offset="0.5" stop-color="#6D5EF7" /><stop offset="1" stop-color="#C65CFF" /></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#6D5EF7" stroke-width="0.5" opacity="0.10" /></pattern>
+  </defs>
+  <rect width="1280" height="290" rx="22" fill="url(#bg)" />
+  <rect x="1" y="1" width="1278" height="288" rx="21" fill="url(#grid)" stroke="#263459" stroke-width="2" />
+  <path d="M28 22H420" stroke="url(#line)" stroke-width="2" />
+  <text x="32" y="27" fill="#7CF7E8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="2">LIVE.SIGNAL / GITHUB TELEMETRY</text>
+  <text x="1248" y="27" text-anchor="end" fill="#7B8BAD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">UPDATED 05 SEP 2026 · 07:37 UTC</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"><g transform="translate(32,42)">
+  <rect width="286" height="126" rx="16" fill="#090E20" stroke="#263459" />
+  <text x="20" y="34" fill="#7B8BAD" font-size="12" letter-spacing="1.5">CONTRIBUIÇÕES · 12 MESES</text>
+  <text x="20" y="89" fill="#7CF7E8" font-size="40" font-weight="700">8</text>
+  <path d="M20 106H266" stroke="#18213D" stroke-width="4" stroke-linecap="round" />
+  <path d="M20 106H126" stroke="#7CF7E8" stroke-width="4" stroke-linecap="round" />
+</g><g transform="translate(338,42)">
+  <rect width="286" height="126" rx="16" fill="#090E20" stroke="#263459" />
+  <text x="20" y="34" fill="#7B8BAD" font-size="12" letter-spacing="1.5">SEQUÊNCIA ATUAL</text>
+  <text x="20" y="89" fill="#C65CFF" font-size="40" font-weight="700">0D</text>
+  <path d="M20 106H266" stroke="#18213D" stroke-width="4" stroke-linecap="round" />
+  <path d="M20 106H152" stroke="#C65CFF" stroke-width="4" stroke-linecap="round" />
+</g><g transform="translate(644,42)">
+  <rect width="286" height="126" rx="16" fill="#090E20" stroke="#263459" />
+  <text x="20" y="34" fill="#7B8BAD" font-size="12" letter-spacing="1.5">MAIOR SEQUÊNCIA</text>
+  <text x="20" y="89" fill="#7CF7E8" font-size="40" font-weight="700">2D</text>
+  <path d="M20 106H266" stroke="#18213D" stroke-width="4" stroke-linecap="round" />
+  <path d="M20 106H178" stroke="#7CF7E8" stroke-width="4" stroke-linecap="round" />
+</g><g transform="translate(950,42)">
+  <rect width="286" height="126" rx="16" fill="#090E20" stroke="#263459" />
+  <text x="20" y="34" fill="#7B8BAD" font-size="12" letter-spacing="1.5">REPOSITÓRIOS PÚBLICOS</text>
+  <text x="20" y="89" fill="#C65CFF" font-size="40" font-weight="700">1</text>
+  <path d="M20 106H266" stroke="#18213D" stroke-width="4" stroke-linecap="round" />
+  <path d="M20 106H204" stroke="#C65CFF" stroke-width="4" stroke-linecap="round" />
+</g></g>
+  <text x="32" y="196" fill="#7B8BAD" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" letter-spacing="2">WEEKLY ACTIVITY / LAST 40 WEEKS</text>
+  <rect x="39" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="69" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="99" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="129" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="159" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="189" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="219" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="249" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="279" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="309" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="339" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="369" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="399" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="429" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="459" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="489" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="519" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="549" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="579" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="609" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="639" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="669" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="699" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="729" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="759" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="789" y="215" width="18" height="31" rx="4" fill="#6D5EF7" opacity="0.92" /><rect x="819" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="849" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="879" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="909" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="939" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="969" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="999" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1029" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1059" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1089" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1119" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1149" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" /><rect x="1179" y="200" width="18" height="46" rx="4" fill="#7CF7E8" opacity="0.92" /><rect x="1209" y="240" width="18" height="6" rx="4" fill="#263459" opacity="0.92" />
+  <circle cx="1244" cy="262" r="4" fill="#7CF7E8"><animate attributeName="opacity" values="1;.2;1" dur="1.8s" repeatCount="indefinite" /></circle>
+  <text x="1230" y="266" text-anchor="end" fill="#7CF7E8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10">SYNCED</text>
+</svg>
