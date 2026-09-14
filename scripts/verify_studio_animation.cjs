@@ -25,6 +25,15 @@ const root = path.resolve(__dirname, '..');
     assert.equal(metadata.height, poseData.patch.height);
     assert(metadata.hasAlpha, `${pose}: preserve transparent registration mask`);
   }
+  // Erasing the idle arm with transparency would reveal the typing arm baked
+  // into the background. This repaired keyboard area must remain opaque.
+  for (const pose of ['grasp', 'lift', 'sip']) {
+    const keyboard = await sharp(path.join(root, `assets/studio-poses/${pose}.png`))
+      .extract({ left: 16, top: 270, width: 140, height: 43 }).ensureAlpha().raw().toBuffer();
+    for (let i = 3; i < keyboard.length; i += 4) {
+      assert.equal(keyboard[i], 255, `${pose}: keyboard repair must hide the background arm`);
+    }
+  }
   const gif = await sharp(path.join(root, 'assets/cloud-ps1-studio.gif'), { animated: true }).metadata();
   assert.equal(gif.width, 1672);
   assert.equal(gif.pageHeight, 941);
@@ -35,5 +44,9 @@ const root = path.resolve(__dirname, '..');
   assert(readme.indexOf('cloud-ps1-studio.gif') > readme.indexOf('// verified.toolchain'));
   assert(readme.indexOf('cloud-ps1-studio.gif') < readme.indexOf('// engineering.depth'));
   assert(readme.includes('media="(prefers-reduced-motion: reduce)" srcset="./assets/cloud-ps1-studio.png"'));
-  console.log('PASS: acting sequence, one shared 16s clock, paused typing, light order, registered sprites, GIF loop and reduced-motion fallback.');
+  assert(readme.includes('src="./assets/studio-stickers.png"'));
+  const stickers = await sharp(path.join(root, 'assets/studio-stickers.png')).metadata();
+  assert.equal(stickers.width, 1706);
+  assert.equal(stickers.height, 342);
+  console.log('PASS: acting sequence, shared 16s clock, paused typing, light order, opaque arm repair, registered sprites, GIF loop, sticker banner and reduced-motion fallback.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

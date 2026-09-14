@@ -109,7 +109,7 @@ O objetivo não é apenas provisionar recursos. É entregar uma arquitetura que 
 </div>
 
 <p align="center">
-  <img src="./assets/studio-stickers.svg" width="100%" alt="Adesivos de tecnologias e ferramentas do meu universo de trabalho: Python, Terraform, AWS, Flutter e outras, com Google Drive e Spotify" />
+  <img src="./assets/studio-stickers.png" width="100%" alt="Colagem de tecnologias em estilo adesivo, com Crash Bandicoot no centro, AWS e Python" />
   <br />
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="./assets/cloud-ps1-studio.png" />
