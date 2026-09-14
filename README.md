@@ -108,6 +108,15 @@ O objetivo não é apenas provisionar recursos. É entregar uma arquitetura que 
 
 </div>
 
+<p align="center">
+  <img src="./assets/studio-stickers.svg" width="100%" alt="Adesivos de tecnologias e ferramentas do meu universo de trabalho: Python, Terraform, AWS, Flutter e outras, com Google Drive e Spotify" />
+  <br />
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/cloud-ps1-studio.png" />
+    <img src="./assets/cloud-ps1-studio.gif" width="100%" alt="Meu cantinho PS1 em pixel art animado: Cloud de Final Fantasy VII com um energético, Python e um emulador Flutter numa tela inspirada no macOS; no CRT lateral, uma homenagem à abertura clássica do PlayStation" />
+  </picture>
+</p>
+
 ## `// engineering.depth`
 
 - arquitetura modular com domínio separado de rotas, telas e fornecedores;
