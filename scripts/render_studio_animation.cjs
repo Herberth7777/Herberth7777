@@ -1,5 +1,5 @@
 /**
- * Subtle, seamless pixel-light animation over the unchanged studio illustration.
+ * Registered pixel-art acting, live code and lighting on a locked studio plate.
  * Requirements: Node.js, sharp, ffmpeg on PATH.
  * Run from the repository root: node scripts/render_studio_animation.cjs
  * The original PNG is also the reduced-motion fallback; never overwrite it.
@@ -8,6 +8,9 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const sharp = require('sharp');
+const { liveCode } = require('./studio-live-code.cjs');
+const { lightSequence } = require('./studio-light-sequence.cjs');
+const poseMetadata = require('../assets/studio-poses/frames.json');
 
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'dist/studio-animation');
@@ -16,12 +19,36 @@ const destination = path.join(root, 'assets/cloud-ps1-studio.gif');
 const width = 1672;
 const height = 941;
 const fps = 10;
-const frames = 80;
+const frames = 160;
 const wave = (t, phase = 0, cycles = 1) => (1 + Math.sin(t * Math.PI * 2 * cycles + phase)) / 2;
 
+function poseAt(seconds) {
+  const t = ((seconds % 16) + 16) % 16;
+  if (t < 3.4) return 'type';
+  if (t < 4.2) return 'look';
+  if (t < 4.4) return 'type';
+  if (t < 5.2) return 'grasp';
+  if (t < 5.8) return 'lift';
+  if (t < 7.8) return 'sip';
+  if (t < 8.6) return 'lift';
+  if (t < 9.4) return 'grasp';
+  return 'type';
+}
+
+function visibleScreen(pose, seconds) {
+  // The drink and hand pass in front of the emulator. This per-pose mask keeps
+  // animated UI behind them; it does not bake a fixed glove into every frame.
+  const silhouette = pose === 'lift'
+    ? 'M976 416H1010V449L1027 479 1000 511H953V469L963 446H973Z'
+    : pose === 'sip'
+      ? 'M986 359H1078V426L1027 454 1000 525H943V480L960 439 978 414V387Z'
+      : '';
+  return `<defs><mask id="studio-visible-screen" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941"><rect width="1672" height="941" fill="white"/><path d="${silhouette}" fill="black"/></mask></defs><g mask="url(#studio-visible-screen)">${liveCode(seconds)}</g>`;
+}
+
 function crtBoot(frame) {
-  // Two quiet startup stages in the CRT glass only. Both endpoints are black,
-  // so the 8-second loop has no abrupt logo jump and never covers the bezel.
+  // One quiet startup in each 16-second acting loop; the CRT bezel stays fixed.
+  frame /= 2;
   const fade = (start, enter, leave, end) => {
     const amount = Math.max(0, Math.min(1, (frame - start) / (enter - start), (end - frame) / (end - leave)));
     return (amount * amount * (3 - 2 * amount)).toFixed(3);
@@ -69,29 +96,18 @@ function crtBoot(frame) {
     </g>`;
 }
 
-function overlay(frame) {
+function overlay(frame, pose = poseAt(frame / fps)) {
   const t = frame / frames;
   const parts = [];
   const rect = (x, y, w, h, color, opacity = 1) => parts.push(
     `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${color}" opacity="${opacity.toFixed(3)}"/>`
   );
-  const stroke = (d, color, opacity, sw = 3) => parts.push(
-    `<path d="${d}" fill="none" stroke="${color}" stroke-width="${sw}" opacity="${opacity.toFixed(3)}"/>`
-  );
-
-  // Terminal caret: blink on the existing cursor, never over the Python source.
-  rect(823, 453, 14, 10, '#0a152c');
-  if (frame % 10 < 6) rect(825, 457, 9, 3, '#d9dadd');
+  parts.push(visibleScreen(pose, frame / fps));
 
   // Classic startup homage stays entirely inside the PlayStation CRT glass.
   parts.push(crtBoot(frame));
 
-  // Four PlayStation shapes gently breathe in their own original colors.
-  const pulse = 0.10 + wave(t, 0, 2) * 0.30;
-  stroke('M85 135 L117 79 L146 135 Z', '#8dffe9', pulse, 4);
-  stroke('M186 81 H209 L230 101 V124 L213 143 H190 L173 125 V102 Z', '#ff779c', pulse, 4);
-  stroke('M260 88 L307 138 M307 88 L260 138', '#91bdff', pulse, 4);
-  stroke('M343 94 H389 V144 H343 Z', '#e395ff', pulse, 4);
+  parts.push(lightSequence(frame / fps));
 
   // Pixel highlights on the PC light strip and the rotating fan rim.
   rect(636, 680, 3, 133, '#72e7ff', 0.10 + wave(t, 1, 2) * 0.40);
@@ -101,11 +117,6 @@ function overlay(frame) {
   // Activity lights: short, repeatable bursts; no distracting strobe.
   rect(684, 724, 5, 2, '#81ddff', frame % 20 < 6 ? 0.75 : 0.05);
   rect(566, 799, 3, 3, '#6affba', frame % 40 < 8 ? 0.68 : 0.10);
-
-  // Tiny specular pixels on the raised can; no deformation of the character.
-  const glint = Math.max(0, wave(t, -Math.PI / 2, 2) - 0.66) * 2.7;
-  rect(1039, 418, 3, 6, '#d8f6ff', glint);
-  rect(1036, 424, 3, 4, '#76cdff', glint * 0.6);
 
   // Quiet city-window activity, confined to the far-right background.
   [[1571,369],[1598,426],[1650,414],[1555,258]].forEach(([x,y], i) => {
@@ -126,9 +137,19 @@ async function main() {
   await fs.mkdir(output, { recursive: true });
   const metadata = await sharp(source).metadata();
   if (metadata.width !== width || metadata.height !== height) throw new Error('Unexpected source dimensions; recalibrate the light coordinates.');
+  const poses = Object.fromEntries(await Promise.all(poseMetadata.poses.map(async name => [name,
+    await fs.readFile(path.join(root, `assets/studio-poses/${name}.png`)),
+  ])));
+  const { left, top } = poseMetadata.patch;
   for (let frame = 0; frame < frames; frame++) {
+    const pose = poseAt(frame / fps);
+    const typing = frame < 33 || (frame >= 100 && frame < 145);
+    const sprite = pose === 'type' && typing && [1, 2].includes(frame % 6) ? 'type-press' : pose;
     await sharp(source)
-      .composite([{ input: Buffer.from(overlay(frame)) }])
+      .composite([
+        { input: poses[sprite], left, top },
+        { input: Buffer.from(overlay(frame, pose)) },
+      ])
       .png()
       .toFile(path.join(output, `frame-${String(frame).padStart(3, '0')}.png`));
   }
@@ -144,4 +165,5 @@ async function main() {
   const stats = await fs.stat(destination);
   console.log(JSON.stringify({ destination, width, height, frames, fps, seconds: frames / fps, bytes: stats.size }, null, 2));
 }
-main().catch(error => { console.error(error); process.exitCode = 1; });
+module.exports = { poseAt, overlay, frames, fps };
+if (require.main === module) main().catch(error => { console.error(error); process.exitCode = 1; });

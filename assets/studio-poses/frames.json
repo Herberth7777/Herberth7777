@@ -1,0 +1,8 @@
+{
+  "canvas": { "width": 1672, "height": 941 },
+  "patch": { "left": 808, "top": 270, "width": 414, "height": 365 },
+  "durationSeconds": 16,
+  "fps": 10,
+  "poses": ["type", "type-press", "look", "grasp", "lift", "sip"],
+  "note": "Registered pixel-art keyframes. The room is a single locked plate; only character patches change. Keep the final typing pose identical to the first."
+}
